@@ -19,7 +19,7 @@ class color:
 session = requests.Session()
 
 session.headers = {'Accept': 'application/json',
-                   'Authorization': 'Bearer dG9rOjM0ZjM1ZmFjXzkxMDBfNDY0MF84NDZlXzU2YmJiM2JkY2JlMDoxOjA='
+                   'Authorization': 'xxxx'
                   }
 
 
