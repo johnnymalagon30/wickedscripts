@@ -15,7 +15,7 @@ class color:
     UNDERLINE = '\033[4m'
     END = '\033[0m'
 
-stripe.api_key = "sk_test_51IfrZtG1vsle4uuv19cbuXwW2B9XctZCa4Xa5O3BRZ1hUoRHcre49QVpiBGS02LYA8cZ6CWkiAaa6MxkaL8I6hrU00HkSa3oGC"
+stripe.api_key = "xxxx"
 
 file_name = 'errorLog.csv'
 with open(file_name, 'w', newline='') as csvfile:
