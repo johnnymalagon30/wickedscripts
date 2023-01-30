@@ -1,3 +1,5 @@
+#This script reads an appropriately formatted CSV file and creates corresponding Intercom Company records. Edits are always necessary depending on requester's needs. DO NOT run as is.
+
 #Import relevant libraries
 import csv
 import requests
