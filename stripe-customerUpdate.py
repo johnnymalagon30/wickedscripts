@@ -1,10 +1,12 @@
+#This script ingests a properly formatted .csv file with customer IDs and field values that the requester would like updated for each customer in the list. 
+
 #Import relevant libraries.
 import csv
 import requests
 import json
 import stripe
 
-#Class for color logging. Easier reading.
+#Class for color logging. Easier reading in terminal output
 class color:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
@@ -40,16 +42,14 @@ with open('customerstoupdate.csv', 'r') as sampleFile:
         cusZip = row[5]
         platformType = row[7]
         salesforceId = row[8]
-        #thryveOrgId = row[3]
-        #thryveUserId = row[4]
+       
 
         try:
             cusUpdate = stripe.Customer.modify(
                 '{}'.format(cusId),
                 name = '{}'.format(cusName),
                 metadata = {
-                            #'thryveOrgId': '{}'.format(thryveOrgId),
-                            #'thryveUserId': '{}'.format(thryveUserId),
+                            
                             'salesforceId': '{}'.format(salesforceId),
                             'platformEntityType': '{}'.format(platformType)
                             },
