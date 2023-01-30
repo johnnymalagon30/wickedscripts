@@ -1,8 +1,9 @@
-
+#Import relevant libraries
 import csv
 import requests
 import json
 
+#Color class for easier reading in terminal output
 class color:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
@@ -18,21 +19,24 @@ class color:
 session = requests.Session()
 
 session.headers = {'Accept': 'application/json',
-                   'Authorization': 'xxxx'
+                   'Authorization': 'xxxx' #place the appropriate dev or prod environment API key here
                   }
 
 companyUrl = 'https://api.intercom.io/companies'
 
+#This creates a .csv file where any error information will be placed during runtime
 file_name = 'companieserrorLog.csv'
 with open(file_name, 'w', newline='') as csvfile:
     membershipwriter = csv.writer(csvfile, delimiter=',')
     membershipwriter.writerow(['companyId']+['status']+['company']+['address']+['city']+['state']+['zip']+['type']+['created']+['number']+['size']+['source'])
 
+#After each new company is created in Intercom, the requested information will be placed in this new .csv file
 companyFile = 'newCompanies.csv'
 with open(companyFile, 'w', newline='') as newfile:
     contactwriter = csv.writer(newfile, delimiter=',')
     contactwriter.writerow(['uniqueId']+['companyId']+['companyName'])
 
+#Opens the properly formatted .csv file with relevant new company data to be inserted into Intercom
 with open('companiestocreate.csv', 'r') as sampleFile:
     reader = csv.reader(sampleFile, delimiter = ',')
     header = next(reader)
