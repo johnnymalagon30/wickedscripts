@@ -1,4 +1,4 @@
-#This script reads an appropriately formatted CSV file and creates corresponding Stripe subscriptions. Edits are always necessary depending on Accounting's needs. DO NOT run as is.
+#This script reads an appropriately formatted CSV file and creates corresponding Stripe subscriptions. Edits are always necessary depending on requester's needs. DO NOT run as is.
 
 #Import relevant libraries.
 import csv
