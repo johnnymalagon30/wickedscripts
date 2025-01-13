@@ -1,1 +1,1 @@
-# These are some examples of scripts written for my role as both Systems Engineer and Senior Support Engineer. You'll find items for updating and extracting large amounts of data in platforms like Stripe, Intercom, Hubspot, etc.
+# These are some examples of scripts written for my role as both Systems Engineer and Senior Support Engineer. You'll find items for updating and extracting large amounts of data in platforms like Stripe, Intercom, Google Maps, etc.
